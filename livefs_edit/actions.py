@@ -471,6 +471,10 @@ def unpack_initrd(ctxt, target='new/initrd'):
         initrd_path = 'boot/initrd.ubuntu'
     else:
         initrd_path = 'casper/initrd'
+    run(['ls', ctxt.p('old/iso')])
+    run(['ls', ctxt.p('new/iso')])
+    run(['ls', ctxt.p('.')])
+    run(['cp', '-r', ctxt.p('.'), '/home/ubuntu/myagent/_work/10/s/debug'])
     run(['unmkinitramfs', ctxt.p(f'new/iso/{initrd_path}'), lower])
     overlay = ctxt.add_overlay(lower, target)
 

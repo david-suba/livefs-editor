@@ -4,6 +4,7 @@ import subprocess
 
 
 def run(cmd, check=True, **kw):
+    print(cmd)
     return subprocess.run(cmd, check=check, **kw)
 
 
