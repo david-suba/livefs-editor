@@ -1,0 +1,1 @@
+unshare --fork --pid -- chroot /target eatmydata apt-get --quiet --assume-yes --option=Dpkg.options::=--force-unsafe-io --option=Dpkg::Options::=--force-confold install linux-generic
